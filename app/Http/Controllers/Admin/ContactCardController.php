@@ -33,7 +33,7 @@ class ContactCardController extends Controller
             $image = $request->file('icon');
             $name_gen_one = "icon". time() . '.' . $image->extension();
             $location = public_path('uploads/contact/'.$name_gen_one);
-            Image::make($image)->save($location);
+            Image::make($image)->resize(40,40)->save($location);
             $save_two = 'uploads/contact/'.$name_gen_one;
             $data['icon'] = $save_two;
 
@@ -70,7 +70,7 @@ class ContactCardController extends Controller
             $image = $request->file('icon');
             $name_gen_one = "icon". time() . '.' . $image->extension();
             $location = public_path('uploads/contact/'.$name_gen_one);
-            Image::make($image)->save($location);
+            Image::make($image)->resize(40,40)->save($location);
             $save_two = 'uploads/contact/'.$name_gen_one;
             $data['icon'] = $save_two;
 

@@ -35,7 +35,7 @@ class FeatureController extends Controller
             $image = $request->file('icon');
             $name_gen_one = "feature". time() . '.' . $image->extension();
             $location = public_path('uploads/service/'.$name_gen_one);
-            Image::make($image)->save($location);
+            Image::make($image)->resize(40,40)->save($location);
             $save_two = 'uploads/service/'.$name_gen_one;
             $data['icon'] = $save_two;
 
@@ -75,7 +75,7 @@ class FeatureController extends Controller
             $image = $request->file('icon');
             $name_gen_one = "feature". time() . '.' . $image->extension();
             $location = public_path('uploads/service/'.$name_gen_one);
-            Image::make($image)->save($location);
+            Image::make($image)->resize(40,40)->save($location);
             $save_two = 'uploads/service/'.$name_gen_one;
             $data['icon'] = $save_two;
 
