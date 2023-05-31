@@ -31,7 +31,7 @@ class AboutBusinessController extends Controller
             $image = $request->file('image');
             $name_gen_one = "business". time() . '.' . $image->extension();
             $location = public_path('uploads/about/'.$name_gen_one);
-            Image::make($image)->save($location);
+            Image::make($image)->resize(570,542)->save($location);
             $save = 'uploads/about/'.$name_gen_one;
             $data['image'] = $save;
 
@@ -62,13 +62,13 @@ class AboutBusinessController extends Controller
 
         if ($request->image) {
 
-            if ($aboutBusiness->image) {
-                 unlink($aboutBusiness->image);
-            }
+            // if ($aboutBusiness->image) {
+            //      unlink($aboutBusiness->image);
+            // }
             $image = $request->file('image');
             $name_gen_one = "business". time() . '.' . $image->extension();
             $location = public_path('uploads/about/'.$name_gen_one);
-            Image::make($image)->save($location);
+            Image::make($image)->resize(570,542)->save($location);
             $save = 'uploads/about/'.$name_gen_one;
             $data['image'] = $save;
 

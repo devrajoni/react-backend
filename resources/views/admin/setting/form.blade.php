@@ -52,7 +52,7 @@
                                 accept="image/*"
                             />
                         </div>
-                        <div class="row">
+<!--                         <div class="row">
                             <x-ui.input
                                 group="col-md-12"
                                 :label="__('Favicon')"
@@ -62,7 +62,7 @@
                                 :value="isset($setting->favicon) ? asset($setting->favicon) :null"
                                 accept="image/*"
                             />
-                        </div>
+                        </div> -->
                         <div class="row">
                             <x-ui.input
                                 group="col-md-6"

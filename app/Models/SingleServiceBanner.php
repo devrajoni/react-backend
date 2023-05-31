@@ -10,9 +10,6 @@ class SingleServiceBanner extends Model
     use HasFactory;
 
     protected $fillable = [
-        'title',
-        'sub_title',
-        'description',
         'image',
     ];
 }

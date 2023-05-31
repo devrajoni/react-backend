@@ -62,9 +62,9 @@ class WorkBannerController extends Controller
 
         if ($request->image) {
 
-            if ($workBanner->image) {
-                 unlink($workBanner->image);
-            }
+            // if ($workBanner->image) {
+            //      unlink($workBanner->image);
+            // }
             $image = $request->file('image');
             $name_gen_one = "banner". time() . '.' . $image->extension();
             $location = public_path('uploads/work/banner/'.$name_gen_one);

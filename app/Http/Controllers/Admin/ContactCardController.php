@@ -64,9 +64,9 @@ class ContactCardController extends Controller
         $data = $request->validated();
 
         if ($request->icon) {
-            if ($service->icon) {
-                 unlink($service->icon);
-            }
+            // if ($service->icon) {
+            //      unlink($service->icon);
+            // }
             $image = $request->file('icon');
             $name_gen_one = "icon". time() . '.' . $image->extension();
             $location = public_path('uploads/contact/'.$name_gen_one);

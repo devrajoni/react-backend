@@ -62,9 +62,9 @@ class TestimonialController extends Controller
 
         if ($request->image) {
 
-            if ($testimonial->image) {
-                 unlink($testimonial->image);
-            }
+            // if ($testimonial->image) {
+            //      unlink($testimonial->image);
+            // }
             $image = $request->file('image');
             $name_gen_one = "banner". time() . '.' . $image->extension();
             $location = public_path('uploads/testimonial/'.$name_gen_one);

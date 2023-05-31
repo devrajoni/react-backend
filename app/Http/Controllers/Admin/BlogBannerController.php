@@ -63,9 +63,9 @@ class BlogBannerController extends Controller
 
         if ($request->image) {
 
-            if ($blogBanner->image) {
-                 unlink($blogBanner->image);
-            }
+            // if ($blogBanner->image) {
+            //      unlink($blogBanner->image);
+            // }
             $image = $request->file('image');
             $name_gen_one = "banner". time() . '.' . $image->extension();
             $location = public_path('uploads/blog/banner/'.$name_gen_one);

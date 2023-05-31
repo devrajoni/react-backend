@@ -62,9 +62,9 @@ class LatestController extends Controller
 
         if ($request->image) {
 
-            if ($latest->image) {
-                 unlink($latest->image);
-            }
+            // if ($latest->image) {
+            //      unlink($latest->image);
+            // }
             $image = $request->file('image');
             $name_gen_one = "banner". time() . '.' . $image->extension();
             $location = public_path('uploads/latest/'.$name_gen_one);

@@ -24,19 +24,19 @@ class SingleServiceBannerRequestForm extends FormRequest
     public function rules()
     {
         return [
-            'title' => [
-                'required',
-                'max:255',
-            ],
+            // 'title' => [
+            //     'required',
+            //     'max:255',
+            // ],
 
-            'sub_title' => [
-                'required',
-                'max:255',
-            ],
+            // 'sub_title' => [
+            //     'required',
+            //     'max:255',
+            // ],
 
-            'description' => [
-                'nullable',
-            ],
+            // 'description' => [
+            //     'nullable',
+            // ],
 
             'image' => [
                 $this->single_service_banner ? 'nullable' : 'required',

@@ -46,6 +46,7 @@
                                 :value="isset($feature->icon) ? asset($feature->icon) :null"
                                 accept="image/*"
                             />
+                            <p>W:40 H:40</p>
                         </div>
                         <div class="row">
                             <x-ui.input

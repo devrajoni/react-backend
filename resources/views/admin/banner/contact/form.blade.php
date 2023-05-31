@@ -35,6 +35,7 @@
                                 :value="isset($contactBanner->image) ? asset($contactBanner->image) :null"
                                 accept="image/*"
                             />
+                            <p>W:2300 H:1533</p>
                             <div class="pt-3">
                                 <button class="btn btn-secondary">Submit</button>
                             </div>

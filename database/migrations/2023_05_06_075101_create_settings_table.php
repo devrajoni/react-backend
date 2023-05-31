@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('email');
             $table->string('phone');
             $table->string('company_logo');
-            $table->string('favicon');
             $table->string('address');
             $table->longText('map');
             $table->longText('description')->nullable();

@@ -63,9 +63,9 @@ class ContactBannnerController extends Controller
 
         if ($request->image) {
 
-            if ($contactBanner->image) {
-                 unlink($contactBanner->image);
-            }
+            // if ($contactBanner->image) {
+            //      unlink($contactBanner->image);
+            // }
             $image = $request->file('image');
             $name_gen_one = "banner". time() . '.' . $image->extension();
             $location = public_path('uploads/contact/banner/'.$name_gen_one);

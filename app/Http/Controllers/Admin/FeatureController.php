@@ -69,9 +69,9 @@ class FeatureController extends Controller
         $data = $request->validated();
 
         if ($request->icon) {
-            if ($feature->icon) {
-                 unlink($feature->icon);
-            }
+            // if ($feature->icon) {
+            //      unlink($feature->icon);
+            // }
             $image = $request->file('icon');
             $name_gen_one = "feature". time() . '.' . $image->extension();
             $location = public_path('uploads/service/'.$name_gen_one);

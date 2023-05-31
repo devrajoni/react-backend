@@ -61,9 +61,9 @@ class TeamController extends Controller
 
         if ($request->image) {
 
-            if ($team->image) {
-                 unlink($team->image);
-            }
+            // if ($team->image) {
+            //      unlink($team->image);
+            // }
             $image = $request->file('image');
             $name_gen_one = "banner". time() . '.' . $image->extension();
             $location = public_path('uploads/team/'.$name_gen_one);

@@ -36,6 +36,7 @@
                                 :value="isset($aboutCard->icon) ? asset($aboutCard->icon) :null"
                                 accept="image/*"
                             />
+                            <p>W:40 H:40</p>
                         </div>
                         <div class="row">
                             <x-ui.input

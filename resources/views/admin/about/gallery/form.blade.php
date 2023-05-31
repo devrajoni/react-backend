@@ -27,10 +27,11 @@
                                 :value="isset($aboutGallery->image_one) ? asset($aboutGallery->image_one) :null"
                                 accept="image/*"
                             />
+                            <p>W:2379 H:1213</p>
                         </div>
-                        <div class="row pb-6">
+                        <div class="row">
                             <x-ui.input
-                                group="col-md-6"
+                                group="col-md-12"
                                 :label="__('Image Two')"
                                 type="file"
                                 name="image_two"
@@ -38,8 +39,11 @@
                                 :value="isset($aboutGallery->image_two) ? asset($aboutGallery->image_two) :null"
                                 accept="image/*"
                             />
+                            <p>W:2379 H:1213</p>
+                        </div>
+                        <div class="row pb-6">
                             <x-ui.input
-                                group="col-md-6"
+                                group="col-md-12"
                                 :label="__('Image Three')"
                                 type="file"
                                 name="image_three"
@@ -47,6 +51,7 @@
                                 :value="isset($aboutGallery->image_three) ? asset($aboutGallery->image_three) :null"
                                 accept="image/*"
                             />
+                            <p>W:2379 H:1213</p>
                             <div class="pt-3">
                                 <button class="btn btn-secondary">Submit</button>
                             </div>

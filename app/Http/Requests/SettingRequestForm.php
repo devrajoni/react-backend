@@ -39,9 +39,9 @@ class SettingRequestForm extends FormRequest
             'company_logo' => [
                 $this->setting ? 'nullable' : 'required',
             ],
-            'favicon' => [
-                $this->setting ? 'nullable' : 'required',
-            ],
+            // 'favicon' => [
+            //     $this->setting ? 'nullable' : 'required',
+            // ],
             'address' => [
                 'required',
                 'max:255',

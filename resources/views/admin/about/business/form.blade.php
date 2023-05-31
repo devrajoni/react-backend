@@ -48,6 +48,7 @@
                                 :value="isset($aboutBusiness->image) ? asset($aboutBusiness->image) :null"
                                 accept="image/*"
                             />
+                            <p>W:570 H:542</p>
                             <div class="pt-3">
                                 <button class="btn btn-secondary">Submit</button>
                             </div>

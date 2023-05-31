@@ -62,9 +62,9 @@ class HomeBannerController extends Controller
 
         if ($request->image) {
 
-            if ($homeBanner->image) {
-                 unlink($homeBanner->image);
-            }
+            // if ($homeBanner->image) {
+            //      unlink($homeBanner->image);
+            // }
             $image = $request->file('image');
             $name_gen_one = "banner". time() . '.' . $image->extension();
             $location = public_path('uploads/home/banner/'.$name_gen_one);

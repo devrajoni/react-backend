@@ -80,9 +80,9 @@ class AboutGalleryController extends Controller
 
         if ($request->image_one) {
 
-            if ($aboutGallery->image_one) {
-                 unlink($aboutGallery->image_one);
-            }
+            // if ($aboutGallery->image_one) {
+            //      unlink($aboutGallery->image_one);
+            // }
             $image = $request->file('image_one');
             $name_gen_one = "gallery_one". time() . '.' . $image->extension();
             $location = public_path('uploads/about/banner/'.$name_gen_one);
@@ -94,9 +94,9 @@ class AboutGalleryController extends Controller
 
         if ($request->image_two) {
 
-            if ($aboutGallery->image_two) {
-                 unlink($aboutGallery->image_two);
-            }
+            // if ($aboutGallery->image_two) {
+            //      unlink($aboutGallery->image_two);
+            // }
             $image = $request->file('image_two');
             $name_gen_one = "gallery_two". time() . '.' . $image->extension();
             $location = public_path('uploads/about/banner/'.$name_gen_one);
@@ -108,9 +108,9 @@ class AboutGalleryController extends Controller
 
         if ($request->image_three) {
 
-            if ($aboutGallery->image_three) {
-                 unlink($aboutGallery->image_three);
-            }
+            // if ($aboutGallery->image_three) {
+            //      unlink($aboutGallery->image_three);
+            // }
             $image = $request->file('image_three');
             $name_gen_one = "gallery_three". time() . '.' . $image->extension();
             $location = public_path('uploads/about/banner/'.$name_gen_one);

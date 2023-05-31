@@ -69,9 +69,9 @@ class WorkController extends Controller
 
         if ($request->image) {
 
-            if ($work->image) {
-                 unlink($work->image);
-            }
+            // if ($work->image) {
+            //      unlink($work->image);
+            // }
             $image = $request->file('image');
             $name_gen_one = "work". time() . '.' . $image->extension();
             $location = public_path('uploads/work/'.$name_gen_one);

@@ -50,6 +50,7 @@
                                 :value="isset($service->icon) ? asset($service->icon) :null"
                                 accept="image/*"
                             />
+                            <p>W:40 H:40</p>
                         </div>
                         <div class="row">
                             <x-ui.input
@@ -61,6 +62,7 @@
                                 :value="isset($service->image) ? asset($service->image) :null"
                                 accept="image/*"
                             />
+                            <p>W:2379 H:1213</p>
                         </div>
                         <div class="row">
                             <x-ui.input

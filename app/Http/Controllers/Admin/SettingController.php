@@ -34,15 +34,15 @@ class SettingController extends Controller
             $save = 'uploads/setting/'.$name_gen_one;
             $data['company_logo'] = $save;
         }
-        if ($request->favicon) {
-            $image = $request->file('favicon');
-            $name_gen_one = "favicon". time() . '.' . $image->extension();
-            $location = public_path('uploads/setting/'.$name_gen_one);
-            Image::make($image)->resize(816,684)->save($location);
-            $favicon = 'uploads/setting/'.$name_gen_one;
-            $data['favicon'] = $favicon;
+        // if ($request->favicon) {
+        //     $image = $request->file('favicon');
+        //     $name_gen_one = "favicon". time() . '.' . $image->extension();
+        //     $location = public_path('uploads/setting/'.$name_gen_one);
+        //     Image::make($image)->resize(816,684)->save($location);
+        //     $favicon = 'uploads/setting/'.$name_gen_one;
+        //     $data['favicon'] = $favicon;
 
-        }
+        // }
 
         Setting::create($data);
 
@@ -69,9 +69,9 @@ class SettingController extends Controller
 
         if ($request->company_logo) {
 
-            if ($setting->company_logo) {
-                 unlink($setting->company_logo);
-            }
+            // if ($setting->company_logo) {
+            //      unlink($setting->company_logo);
+            // }
             $image = $request->file('company_logo');
             $name_gen_one = "banner". time() . '.' . $image->extension();
             $location = public_path('uploads/setting/'.$name_gen_one);
@@ -81,19 +81,19 @@ class SettingController extends Controller
 
         }
 
-        if ($request->favicon) {
+        // if ($request->favicon) {
 
-            if ($setting->favicon) {
-                 unlink($setting->favicon);
-            }
-            $image = $request->file('favicon');
-            $name_gen_one = "favicon". time() . '.' . $image->extension();
-            $location = public_path('uploads/setting/'.$name_gen_one);
-            Image::make($image)->resize(816,684)->save($location);
-            $favicon = 'uploads/setting/'.$name_gen_one;
-            $data['favicon'] = $favicon;
+        //     if ($setting->favicon) {
+        //          unlink($setting->favicon);
+        //     }
+        //     $image = $request->file('favicon');
+        //     $name_gen_one = "favicon". time() . '.' . $image->extension();
+        //     $location = public_path('uploads/setting/'.$name_gen_one);
+        //     Image::make($image)->resize(816,684)->save($location);
+        //     $favicon = 'uploads/setting/'.$name_gen_one;
+        //     $data['favicon'] = $favicon;
 
-        }
+        // }
         
         $setting->update($data);
 

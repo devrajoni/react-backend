@@ -16,7 +16,7 @@
                         @csrf
                         @isset($singleServiceBanner) @method('PUT') @endisset
 
-                        <div class="row pt-6">
+<!--                         <div class="row pt-6">
                             <x-ui.input
                                 group="col-md-6"
                                 :label="__('Title')"
@@ -31,8 +31,8 @@
                                 id="sub_title"
                                 :value="$singleServiceBanner->sub_title ?? null"
                             />
-                        </div>
-                        <div class="row">
+                        </div> -->
+<!--                         <div class="row">
                             <x-ui.input
                                 group="col-md-12"
                                 :label="__('Description')"
@@ -43,8 +43,8 @@
                                 class="summernote"
                                 rows="3"
                             />
-                        </div>
-                        <div class="row pb-6">
+                        </div> -->
+                        <div class="row py-6">
                             <x-ui.input
                                 group="col-md-12"
                                 :label="__('Image')"
@@ -54,6 +54,7 @@
                                 :value="isset($singleServiceBanner->image) ? asset($singleServiceBanner->image) :null"
                                 accept="image/*"
                             />
+                            <p>W:2500 H:1754</p>
                             <div class="pt-3">
                                 <button class="btn btn-secondary">Submit</button>
                             </div>

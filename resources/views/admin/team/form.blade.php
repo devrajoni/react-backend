@@ -64,6 +64,7 @@
                                 :value="isset($team->image) ? asset($team->image) :null"
                                 accept="image/*"
                             />
+                            <p>W:769 H:1024</p>
                         </div>
                         <div class="row pb-6">
                             <div class="col-md-12">

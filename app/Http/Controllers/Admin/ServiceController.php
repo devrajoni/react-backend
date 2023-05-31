@@ -71,9 +71,9 @@ class ServiceController extends Controller
         $data = $request->validated();
 
         if ($request->image) {
-            if ($service->image) {
-                 unlink($service->image);
-            }
+            // if ($service->image) {
+            //      unlink($service->image);
+            // }
             $image = $request->file('image');
             $name_gen_one = "image". time() . '.' . $image->extension();
             $location = public_path('uploads/service/'.$name_gen_one);
@@ -83,9 +83,9 @@ class ServiceController extends Controller
         }
 
         if ($request->icon) {
-            if ($service->icon) {
-                 unlink($service->icon);
-            }
+            // if ($service->icon) {
+            //      unlink($service->icon);
+            // }
             $image = $request->file('icon');
             $name_gen_one = "icon". time() . '.' . $image->extension();
             $location = public_path('uploads/service/'.$name_gen_one);

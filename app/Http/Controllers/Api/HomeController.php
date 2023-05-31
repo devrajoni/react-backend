@@ -185,10 +185,10 @@ class HomeController extends Controller
 
     public function setting()
     {
-        $data = Setting::first();
+        $result = Setting::first();
 
         return response()->json([
-            'data' => $data,
+            'data' => $result,
             'success' => true,
         ],201);
     }

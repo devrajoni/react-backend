@@ -15,9 +15,6 @@ return new class extends Migration
     {
         Schema::create('single_service_banners', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('sub_title');
-            $table->longText('description')->nullable();
             $table->string('image');
             $table->timestamps();
         });

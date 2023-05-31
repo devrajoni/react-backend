@@ -62,9 +62,9 @@ class SingleServiceBannerController extends Controller
 
         if ($request->image) {
 
-            if ($singleServiceBanner->image) {
-                 unlink($singleServiceBanner->image);
-            }
+            // if ($singleServiceBanner->image) {
+            //      unlink($singleServiceBanner->image);
+            // }
             $image = $request->file('image');
             $name_gen_one = "service-banner". time() . '.' . $image->extension();
             $location = public_path('uploads/service/banner/'.$name_gen_one);
