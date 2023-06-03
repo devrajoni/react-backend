@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests\WorkRequestForm;
-use App\Models\Work;
+use App\Models\AllWork;
 use App\Models\WorkCategory;
 use Image;
 
@@ -13,7 +13,7 @@ class WorkController extends Controller
 {
     public function index()
     {
-        $works = Work::with('category')->get();
+        $works = AllWork::with('category')->get();
 
         return view('admin.work.work.index', compact('works'));
 
@@ -40,7 +40,7 @@ class WorkController extends Controller
 
         }
 
-        Work::create($data);
+        AllWork::create($data);
 
         toastr()->success('Data has been insert successfully!', 'Congrats');
 
@@ -54,7 +54,7 @@ class WorkController extends Controller
         //
     }
 
-    public function edit(Work $work)
+    public function edit(AllWork $work)
     {
         $data['work']= $work;
 
@@ -63,7 +63,7 @@ class WorkController extends Controller
         return view('admin.work.work.form', $data);
     }
 
-    public function update(WorkRequestForm $request, Work $work)
+    public function update(WorkRequestForm $request, AllWork $work)
     {
         $data = $request->validated();
 
@@ -89,7 +89,7 @@ class WorkController extends Controller
                 ->route('work.index');
                 
     }
-    public function destroy(Work $work)
+    public function destroy(AllWork $work)
     {
         $work->delete();
 
@@ -102,13 +102,13 @@ class WorkController extends Controller
 
     public function status($id)
     {
-        $data = Work::select('status')->where('id', $id)->first();
+        $data = AllWork::select('status')->where('id', $id)->first();
         if ($data->status == 'Active') {
             $status = 'Inactive';
         }else{
             $status = 'Active';
         }
-        Work::where('id', $id)->update(['status' => $status]);
+        AllWork::where('id', $id)->update(['status' => $status]);
 
         return redirect()->route('work.index');
 

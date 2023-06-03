@@ -17,9 +17,12 @@
 					    <thead>
 						    <tr>
 						      <th class="text-start">#</th>
-						      <th class="text-center">Title</th>
-						      <th class="text-center">Image</th>
 						      <th class="text-center">Category</th>
+						      <th class="text-center">Title</th>
+						      <th class="text-center">Author</th>
+						      <th class="text-center">Client</th>
+						      <th class="text-center">Image</th>
+						      <th class="text-center">Date</th>
 						      <th class="text-center">Status</th>
 						      <th class="text-end">Action</th>
 						    </tr>
@@ -28,9 +31,12 @@
 					  		@foreach($works as $work)
 							    <tr>
 							      	<td class="text-start">{{$loop->iteration}}</td>
-							      	<td class="text-center">{{ $work->title }}	</td>
-							      	<td class="text-center"><img src="{{ asset($work->image) }}" alt="image" height="100" width="200"></td>
 							      	<td class="text-center">{{ $work->category->name ?? null }}</td>
+							      	<td class="text-center">{{ $work->title }}	</td>
+							      	<td class="text-center">{{ $work->author }}	</td>
+							      	<td class="text-center">{{ $work->client }}	</td>
+							      	<td class="text-center"><img src="{{ asset($work->image) }}" alt="image" height="100" width="200"></td>
+							      	<td class="text-center">{{ $work->date->format('d-m-Y') }}</td>
                                   	<td class="text-center">
                                         @if($work->status == 'Active')
                                             <a href="{{ route('work-status', $work->id) }}"><span class="badge badge-pill badge-primary">Active</span>

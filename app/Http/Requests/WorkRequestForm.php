@@ -31,6 +31,21 @@ class WorkRequestForm extends FormRequest
                 'required',
                 'max:255',
             ],
+            'author' => [
+                'required',
+                'max:255',
+            ],
+            'client' => [
+                'required',
+                'max:255',
+            ],
+            'date' => [
+                'required',
+                'max:255',
+            ],
+            'description' => [
+                'nullable',
+            ],
             'image' => [
                 $this->work ? 'nullable' : 'required',
                 'image',   

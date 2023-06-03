@@ -17,7 +17,7 @@ use App\Models\Latest;
 use App\Models\Social;
 use App\Models\Setting;
 use App\Models\Team;
-use App\Models\Work;
+use App\Models\AllWork;
 use App\Models\AboutGallery;
 use App\Models\ServiceWork;
 use App\Models\WorkGallery;
@@ -165,7 +165,17 @@ class HomeController extends Controller
 
     public function works()
     {
-        $data = Work::where('status', 'Active')->with('category')->get();
+        $data = AllWork::where('status', 'Active')->with('category')->get();
+
+        return response()->json([
+            'data' => $data,
+            'success' => true,
+        ],201);
+    }
+
+    public function singleWork($id)
+    {
+        $data = AllWork::where('status', 'Active')->with('category')->where('id', $id)->first();
 
         return response()->json([
             'data' => $data,

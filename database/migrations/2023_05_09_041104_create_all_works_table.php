@@ -13,11 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('works', function (Blueprint $table) {
+        Schema::create('all_works', function (Blueprint $table) {
             $table->id();
             $table->foreignId('category_id');
             $table->string('title');
+            $table->string('author');
+            $table->string('client');
+            $table->string('date');
             $table->string('image');
+            $table->longText('description')->nullable();
             $table->enum('status', ['Active', 'Inactive']);
             $table->timestamps();
         });
