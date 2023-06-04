@@ -31,7 +31,7 @@ class LatestController extends Controller
             $image = $request->file('image');
             $name_gen_one = "banner". time() . '.' . $image->extension();
             $location = public_path('uploads/latest/'.$name_gen_one);
-            Image::make($image)->resize(816,684)->save($location);
+            Image::make($image)->resize(413,346)->save($location);
             $save = 'uploads/latest/'.$name_gen_one;
             $data['image'] = $save;
 
@@ -68,7 +68,7 @@ class LatestController extends Controller
             $image = $request->file('image');
             $name_gen_one = "banner". time() . '.' . $image->extension();
             $location = public_path('uploads/latest/'.$name_gen_one);
-            Image::make($image)->resize(816,684)->save($location);
+            Image::make($image)->resize(413,346)->save($location);
             $save = 'uploads/latest/'.$name_gen_one;
             $data['image'] = $save;
 

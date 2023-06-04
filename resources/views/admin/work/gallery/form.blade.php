@@ -62,6 +62,7 @@
                                 accept="image/*"
                                 multiple
                             />
+                            <p>Width:360 Height:200</p>
                         </div>
                         <div class="row">
                             <div class="col-lg-12 d-flex">

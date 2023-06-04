@@ -47,7 +47,7 @@
                                 :value="isset($latest->image) ? asset($latest->image) :null"
                                 accept="image/*"
                             />
-                            <p>W:816 H:684</p>
+                            <p>W:413 H:346</p>
                         </div>
                         <div class="row pb-6">
                             <div class="col-md-12">

@@ -34,7 +34,7 @@ class WorkGalleryController extends Controller
                 // $gallery_two = null;
                 $name_gen = "gallery".  "one". hexdec(uniqid()) . '.' . $gallery->extension();
                 $location               = public_path('uploads/work/'.$name_gen);
-                Image::make($gallery)->save($location);
+                Image::make($gallery)->resize(360,200)->save($location);
                 $gallery_one = 'uploads/work/'.$name_gen;
                 $data_one = WorkGallery::create([
                     'image' => $gallery_one,

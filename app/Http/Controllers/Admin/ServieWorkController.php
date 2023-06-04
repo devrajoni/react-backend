@@ -34,7 +34,7 @@ class ServieWorkController extends Controller
                 // $gallery_two = null;
                 $name_gen = "gallery".  "one". hexdec(uniqid()) . '.' . $gallery->extension();
                 $location               = public_path('uploads/service/'.$name_gen);
-                Image::make($gallery)->save($location);
+                Image::make($gallery)->resize(397,397)->save($location);
                 $gallery_one = 'uploads/service/'.$name_gen;
                 $data_one = ServiceWork::create([
                     'image' => $gallery_one,

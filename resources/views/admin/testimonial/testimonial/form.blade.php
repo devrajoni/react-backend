@@ -54,7 +54,7 @@
                                 accept="image/*"
                                 class="dropzone" id="dropzone"
                             />
-                            <p>W:816 H:684</p>
+                            <p>W:128 H:128</p>
                         </div>
                         <div class="row pb-6">
                             <div class="col-md-12">
