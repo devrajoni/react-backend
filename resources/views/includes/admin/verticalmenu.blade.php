@@ -11,7 +11,7 @@
                 <img src="{{asset('uploads/profile/user-profile.png')}}" class="avatar-xxl rounded-circle mb-1" alt="default">
             </div>
             <div class="user-info">
-                <h5 class=" mb-2">Agency</h5>
+                <h5 class=" mb-2">{{auth()->user()->name}}</h5>
                 <!-- <div class="allprofilerating pt-1" data-rating="5"></div> -->
             </div>
         </div>
@@ -145,6 +145,33 @@
                         <li><a href="{{url('admin/about-business')}}" class="slide-item">Business</a></li>
                     </ul>
                 </li>
+                <li class="slide">
+                    <a class="side-menu__item" data-bs-toggle="slide" href="#">
+                        <svg class="sidemenu_icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M22 10V6c0-1.11-.9-2-2-2H4c-1.1 0-1.99.89-1.99 2v4c1.1 0 1.99.9 1.99 2s-.89 2-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c-1.1 0-2-.9-2-2s.9-2 2-2zm-2-1.46c-1.19.69-2 1.99-2 3.46s.81 2.77 2 3.46V18H4v-2.54c1.19-.69 2-1.99 2-3.46 0-1.48-.8-2.77-1.99-3.46L4 6h16v2.54zM11 15h2v2h-2zm0-4h2v2h-2zm0-4h2v2h-2z"/></svg>
+                        <span class="side-menu__label">Team</span><i class="angle fa fa-angle-right"></i>
+                    </a>
+                    <ul class="slide-menu custom-ul">
+                
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="slide">
+            <a class="side-menu__item" data-bs-toggle="slide" href="#">
+                <svg class="sidemenu_icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M22 10V6c0-1.11-.9-2-2-2H4c-1.1 0-1.99.89-1.99 2v4c1.1 0 1.99.9 1.99 2s-.89 2-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c-1.1 0-2-.9-2-2s.9-2 2-2zm-2-1.46c-1.19.69-2 1.99-2 3.46s.81 2.77 2 3.46V18H4v-2.54c1.19-.69 2-1.99 2-3.46 0-1.48-.8-2.77-1.99-3.46L4 6h16v2.54zM11 15h2v2h-2zm0-4h2v2h-2zm0-4h2v2h-2z"/></svg>
+                <span class="side-menu__label">Blog</span><i class="angle fa fa-angle-right"></i>
+            </a>
+            <ul class="slide-menu custom-ul">
+                <li class="slide">
+                    <a class="side-menu__item" data-bs-toggle="slide" href="#">
+                        <svg class="sidemenu_icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M22 10V6c0-1.11-.9-2-2-2H4c-1.1 0-1.99.89-1.99 2v4c1.1 0 1.99.9 1.99 2s-.89 2-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c-1.1 0-2-.9-2-2s.9-2 2-2zm-2-1.46c-1.19.69-2 1.99-2 3.46s.81 2.77 2 3.46V18H4v-2.54c1.19-.69 2-1.99 2-3.46 0-1.48-.8-2.77-1.99-3.46L4 6h16v2.54zM11 15h2v2h-2zm0-4h2v2h-2zm0-4h2v2h-2z"/></svg>
+                         <span class="side-menu__label">Latest</span><i class="angle fa fa-angle-right"></i>
+                    </a>
+            <ul class="slide-menu custom-ul">
+                <li><a href="{{url('admin/latest/create')}}" class="slide-item">Create Latest</a></li>
+                <li><a href="{{url('admin/latest')}}" class="slide-item">All Latest</a></li>
+            </ul>
+        </li>
             </ul>
         </li>
         <li class="slide">
@@ -157,26 +184,7 @@
                 <li><a href="{{url('admin/testimonial')}}" class="slide-item">All Testimonial</a></li>
             </ul>
         </li>
-        <li class="slide">
-            <a class="side-menu__item" data-bs-toggle="slide" href="#">
-                <svg class="sidemenu_icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M22 10V6c0-1.11-.9-2-2-2H4c-1.1 0-1.99.89-1.99 2v4c1.1 0 1.99.9 1.99 2s-.89 2-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c-1.1 0-2-.9-2-2s.9-2 2-2zm-2-1.46c-1.19.69-2 1.99-2 3.46s.81 2.77 2 3.46V18H4v-2.54c1.19-.69 2-1.99 2-3.46 0-1.48-.8-2.77-1.99-3.46L4 6h16v2.54zM11 15h2v2h-2zm0-4h2v2h-2zm0-4h2v2h-2z"/></svg>
-                <span class="side-menu__label">Latest</span><i class="angle fa fa-angle-right"></i>
-            </a>
-            <ul class="slide-menu custom-ul">
-                <li><a href="{{url('admin/latest/create')}}" class="slide-item">Create Latest</a></li>
-                <li><a href="{{url('admin/latest')}}" class="slide-item">All Latest</a></li>
-            </ul>
-        </li>
-        <li class="slide">
-            <a class="side-menu__item" data-bs-toggle="slide" href="#">
-                <svg class="sidemenu_icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M22 10V6c0-1.11-.9-2-2-2H4c-1.1 0-1.99.89-1.99 2v4c1.1 0 1.99.9 1.99 2s-.89 2-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c-1.1 0-2-.9-2-2s.9-2 2-2zm-2-1.46c-1.19.69-2 1.99-2 3.46s.81 2.77 2 3.46V18H4v-2.54c1.19-.69 2-1.99 2-3.46 0-1.48-.8-2.77-1.99-3.46L4 6h16v2.54zM11 15h2v2h-2zm0-4h2v2h-2zm0-4h2v2h-2z"/></svg>
-                <span class="side-menu__label">Team</span><i class="angle fa fa-angle-right"></i>
-            </a>
-            <ul class="slide-menu custom-ul">
-                <li><a href="{{url('admin/team/create')}}" class="slide-item">Create Team</a></li>
-                <li><a href="{{url('admin/team')}}" class="slide-item">All Team</a></li>
-            </ul>
-        </li>
+ 
         <li class="slide">
             <a class="side-menu__item" data-bs-toggle="slide" href="#">
                 <svg class="sidemenu_icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M22 10V6c0-1.11-.9-2-2-2H4c-1.1 0-1.99.89-1.99 2v4c1.1 0 1.99.9 1.99 2s-.89 2-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c-1.1 0-2-.9-2-2s.9-2 2-2zm-2-1.46c-1.19.69-2 1.99-2 3.46s.81 2.77 2 3.46V18H4v-2.54c1.19-.69 2-1.99 2-3.46 0-1.48-.8-2.77-1.99-3.46L4 6h16v2.54zM11 15h2v2h-2zm0-4h2v2h-2zm0-4h2v2h-2z"/></svg>
