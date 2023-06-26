@@ -29,8 +29,9 @@
           
         >
           <img
-            src="{{asset('fontend')}}/images/login/login-1.png"
-            class="h-100 w-100"
+            src="{{asset('assets/images/login.png')}}"
+            class="w-100"
+            height="649"
             alt=""
           />
         </div>
@@ -137,10 +138,6 @@
         </a>
       </div>
     </div>
-    <button class="g-recaptcha" 
-        data-sitekey="reCAPTCHA_site_key" 
-        data-callback='onSubmit' 
-        data-action='submit'>Submit</button>
 
     <script>
       function passwordToggle() {

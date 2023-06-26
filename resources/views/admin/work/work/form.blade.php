@@ -56,7 +56,7 @@
                                 type="date"
                                 name="date"
                                 id="date"
-                                :value="$work->date ?? null"
+                                :value="optional($work->date ?? null)->format('Y-m-d')"
                             />
                         </div>
                         <div class="row">
