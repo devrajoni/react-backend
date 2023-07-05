@@ -13,13 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('latests', function (Blueprint $table) {
+        Schema::create('singleblogs', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->longText('short_description')->nullable();
-            $table->longText('long_description')->nullable();
             $table->string('image');
-            $table->enum('status', ['Active', 'Inactive']);
             $table->timestamps();
         });
     }
@@ -31,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('latests');
+        Schema::dropIfExists('singleblogs');
     }
 };

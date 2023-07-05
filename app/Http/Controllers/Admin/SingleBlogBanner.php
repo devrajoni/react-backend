@@ -4,18 +4,17 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Http\Requests\BlogBannerRequestForm;
-use App\Models\BlogBanner;
+use App\Models\SingleBlog;
+use App\Http\Requests\SingleBlogBannerRequest;
 use Image;
 
-class BlogBannerController extends Controller
+class SingleBlogBanner extends Controller
 {
-
     public function index()
     {
-        $blogBanner = BlogBanner::first();
+        $singleBlog = SingleBlog::first();
 
-        return view('admin.banner.blog.form', compact('blogBanner'));
+        return view('admin.banner.blog.single-blog', compact('singleBlog'));
 
     }
     public function create()
@@ -24,7 +23,7 @@ class BlogBannerController extends Controller
         
     }
 
-    public function store(BlogBannerRequestForm $request)
+    public function store(SingleBlogBannerRequest $request)
     {
         $banner = $request->validated();
 
@@ -38,12 +37,12 @@ class BlogBannerController extends Controller
 
         }
 
-        BlogBanner::create($banner);
+        SingleBlog::create($banner);
 
         toastr()->success('Data has been insert successfully!', 'Congrats');
 
         return redirect()
-                ->route('blog-banner.index');
+                ->route('single-blog.index');
 
     }
 
@@ -52,19 +51,19 @@ class BlogBannerController extends Controller
         //
     }
 
-    public function edit(BlogBanner $blogBanner)
+    public function edit(SingleBlog $singleBlog)
     {
-        return view('admin.banner.blog.form', compact('blogBanner'));
+        return view('admin.banner.blog.single-blog', compact('singleBlog'));
     }
 
-    public function update(BlogBannerRequestForm $request, BlogBanner $blogBanner)
+    public function update(SingleBlogBannerRequest $request, SingleBlog $singleBlog)
     {
         $banner = $request->validated();
 
         if ($request->image) {
 
-            // if ($blogBanner->image) {
-            //      unlink($blogBanner->image);
+            // if ($SingleBlogBanner->image) {
+            //      unlink($SingleBlogBanner->image);
             // }
             $image = $request->file('image');
             $name_gen_one = "banner". time() . '.' . $image->extension();
@@ -75,11 +74,11 @@ class BlogBannerController extends Controller
 
         }
         
-        $blogBanner->update($banner);
+        $singleBlog->update($banner);
 
         toastr()->success('Data has been update successfully!', 'Congrats');
 
         return redirect()
-                ->route('blog-banner.index');
+                ->route('single-blog.index');
     }
 }

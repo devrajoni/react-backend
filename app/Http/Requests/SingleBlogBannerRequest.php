@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class LatestRequestForm extends FormRequest
+class SingleBlogBannerRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -28,20 +28,11 @@ class LatestRequestForm extends FormRequest
                 'required',
                 'max:255',
             ],
-            'short_description' => [
-                'nullable',
-                
-            ],
-            'long_description' => [
-                'nullable',
-                
-            ],
+
             'image' => [
-                $this->latest ? 'nullable' : 'required',
+                $this->single_blog ? 'nullable' : 'required',
                 'image',
-            ],
-            'status' => [
-                'required',   
+                
             ],
         ];
     }

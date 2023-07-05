@@ -32,7 +32,7 @@ class ContactBannnerController extends Controller
             $image = $request->file('image');
             $name_gen_one = "banner". time() . '.' . $image->extension();
             $location = public_path('uploads/contact/banner/'.$name_gen_one);
-            Image::make($image)->resize(2300,1533)->save($location);
+            Image::make($image)->resize(2000,600)->save($location);
             $save = 'uploads/contact/banner/'.$name_gen_one;
             $banner['image'] = $save;
 
@@ -69,7 +69,7 @@ class ContactBannnerController extends Controller
             $image = $request->file('image');
             $name_gen_one = "banner". time() . '.' . $image->extension();
             $location = public_path('uploads/contact/banner/'.$name_gen_one);
-            Image::make($image)->resize(2300,1533)->save($location);
+            Image::make($image)->resize(2000,600)->save($location);
             $save = 'uploads/contact/banner/'.$name_gen_one;
             $banner['image'] = $save;
 

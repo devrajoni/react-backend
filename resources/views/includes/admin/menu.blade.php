@@ -37,10 +37,10 @@
 							<p class="text-center user-semi-title">Super Admin</p>
 							
 						</div>
-<!-- 						<a class="dropdown-item d-flex" href="{{url('/admin/profile')}}">
+						<a class="dropdown-item d-flex" href="{{url('/profile')}}">
 							<i class="feather feather-user me-3 fs-16 my-auto"></i>
 							<div class="mt-1">Profile</div>
-						</a> -->
+						</a>
 						<a class="dropdown-item d-flex" href="{{url('/admin/social')}}">
 							<i class="feather feather-user me-3 fs-16 my-auto"></i>
 							<div class="mt-1">Social</div>

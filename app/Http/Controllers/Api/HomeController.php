@@ -28,6 +28,7 @@ use App\Models\SimilarProject;
 use App\Models\Feature;
 use App\Models\ContactCard;
 use App\Models\WorkCategory;
+use App\Models\SingleBlog;
 
 class HomeController extends Controller
 {
@@ -101,6 +102,16 @@ class HomeController extends Controller
         ],201);
     }
 
+    public function singleBlog()
+    {
+        $data = SingleBlog::first();
+
+        return response()->json([
+            'data' => $data,
+            'success' => true,
+        ],201);
+    }
+
     public function services()
     {
         $data = Service::where('status', 'Active')->get();
@@ -119,6 +130,16 @@ class HomeController extends Controller
         return response()->json([
             'data' => $data,
             'services' => $services,
+            'success' => true,
+        ],201);
+    }
+
+    public function blogDetails($id)
+    {
+        $data = Latest::where('id', $id)->get();
+
+        return response()->json([
+            'data' => $data,
             'success' => true,
         ],201);
     }

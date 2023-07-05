@@ -14,9 +14,9 @@
         <div class="col-md-12">
             <div class="card border-0">
                 <div class="card-body">
-                    <form action="{{ isset($contactBanner) ? route('contact-banner.update', $contactBanner->id) : route('contact-banner.store')}}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ isset($singleBlog) ? route('single-blog.update', $singleBlog->id) : route('single-blog.store')}}" method="POST" enctype="multipart/form-data">
                         @csrf
-                        @isset($contactBanner) @method('PUT') @endisset
+                        @isset($singleBlog) @method('PUT') @endisset
 
                         <div class="row py-6">
                             <x-ui.input
@@ -24,7 +24,7 @@
                                 :label="__('Title')"
                                 name="title"
                                 id="title"
-                                :value="$contactBanner->title ?? null"
+                                :value="$singleBlog->title ?? null"
                             />
                             <x-ui.input
                                 group="col-md-6"
@@ -32,7 +32,7 @@
                                 type="file"
                                 name="image"
                                 id="image"
-                                :value="isset($contactBanner->image) ? asset($contactBanner->image) :null"
+                                :value="isset($singleBlog->image) ? asset($singleBlog->image) :null"
                                 accept="image/*"
                             />
                             <p>W:2000 H:600</p>

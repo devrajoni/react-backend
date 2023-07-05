@@ -30,7 +30,7 @@
 								    <td class="text-start">{{$loop->iteration}}</td>
 								    <td class="text-center">{{ $latest->title }}</td>
 								    <td class="text-center"><img src="{{ asset($latest->image) }}" alt="image" height="100" width="200"></td>
-								    <td class="text-center">{!! $latest->description !!}</td>
+								    <td class="text-center">{!! $latest->short_description !!}</td>
                           	  		<td class="text-center">
                                         @if($latest->status == 'Active')
                                             <a href="{{ route('latest-status', $latest->id) }}"><span class="badge badge-pill badge-primary">Active</span>

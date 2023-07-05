@@ -62,7 +62,7 @@
                                 accept="image/*"
                                 multiple
                             />
-                            <p>W:2000 H:1331 Max:5</p>
+                            <p>W:1200 H:400 Max:5</p>
                         </div>
                         <div class="row">
                             <div class="col-lg-12 d-flex">

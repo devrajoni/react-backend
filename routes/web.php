@@ -32,6 +32,7 @@ use App\Http\Controllers\Admin\SimilarProjectController;
 use App\Http\Controllers\Admin\ContactCardController;
 use App\Http\Controllers\Admin\ServiceSkillController;
 use App\Http\Controllers\Admin\WorkCategoryController;
+use App\Http\Controllers\Admin\SingleBlogBanner;
 
 /*
 |--------------------------------------------------------------------------
@@ -69,6 +70,7 @@ Route::group(['middleware' =>['admin.auth','auth']], function(){
         Route::resource('work-banner', WorkBannerController::class);
         Route::resource('about-banner', AboutBannerController::class);
         Route::resource('blog-banner', BlogBannerController::class);
+        Route::resource('single-blog', SingleBlogBanner::class);
         Route::resource('contact-banner', ContactBannnerController::class);
         Route::resource('service', ServiceController::class);
         Route::get('service-status/{id}', [ServiceController::class, 'status'])->name('service-status');

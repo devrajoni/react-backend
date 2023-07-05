@@ -1,35 +1,51 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" >
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
+        @include('includes.admin.styles')
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
-
-        <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
-
-        <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        
+        
     </head>
-    <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
-            @include('layouts.navigation')
 
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white dark:bg-gray-800 shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endif
+    <body class="app sidebar-mini @if(Auth::check() && Auth::user()->darkmode == 1) dark-mode @endif">
 
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
+        <div class="page mt-5">
+            <div class="page-main">
+                    @include('includes.admin.verticalmenu')
+                    <div class="app-content main-content">
+                        <div class="side-app">
+                            @include('includes.admin.menu')
+
+                            @yield('content')
+
+                        </div>
+                    </div><!-- end app-content-->
+            </div>
+            @include('includes.admin.footer')
+
         </div>
+
+        @include('includes.admin.scripts')
+
+    @if (Session::has('error'))
+        <script>
+            toastr.error("{!! Session::get('error') !!}");
+        </script>
+    @elseif(Session::has('success'))
+        <script>
+            toastr.success("{!! Session::get('success') !!}");
+        </script>
+    @elseif(Session::has('info'))
+        <script>
+            toastr.info("{!! Session::get('info') !!}");
+        </script>
+    @elseif(Session::has('warning'))
+        <script>
+            toastr.warning("{!! Session::get('warning') !!}");
+        </script>
+    @endif
+
+        @yield('modal')
+
     </body>
 </html>

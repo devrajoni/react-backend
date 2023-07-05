@@ -26,6 +26,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     Route::get('/about-banner',[HomeController::class,'about'])->name('about-banner');
     Route::get('/work-banner',[HomeController::class,'work'])->name('work-banner');
     Route::get('/blog-banner',[HomeController::class,'blog'])->name('blog-banner');
+    Route::get('/single-blog',[HomeController::class,'singleBlog'])->name('single-blog');
+    Route::get('/blog-details/{id}',[HomeController::class,'blogDetails'])->name('blog-details');
     Route::get('/contact-banner',[HomeController::class,'contact'])->name('contact-banner');
     Route::get('/service',[HomeController::class,'services'])->name('service');
     Route::get('/single-service/{id}',[HomeController::class,'serviceOne']);

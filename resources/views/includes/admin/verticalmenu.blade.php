@@ -42,6 +42,7 @@
                 <li><a href="{{url('admin/work-banner')}}" class="slide-item">Work</a></li>
                 <li><a href="{{url('admin/about-banner')}}" class="slide-item">About</a></li>
                 <li><a href="{{url('admin/blog-banner')}}" class="slide-item">Blog</a></li>
+                <li><a href="{{url('admin/single-blog')}}" class="slide-item">Single Blog</a></li>
                 <li><a href="{{url('admin/contact-banner')}}" class="slide-item">Contact</a></li>
             </ul>
         </li>

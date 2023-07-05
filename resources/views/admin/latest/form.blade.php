@@ -28,12 +28,23 @@
                         <div class="row">
                             <x-ui.input
                                 group="col-md-12"
-                                :label="__('Description')"
+                                :label="__('Short Description')"
                                 type="textarea"
-                                name="description"
-                                id="description"
-                                :value="$latest->description ?? null"
-                                rows="3"
+                                name="short_description"
+                                id="short_description"
+                                :value="$latest->short_description ?? null"
+                                rows="2"
+                            />
+                        </div>
+                        <div class="row">
+                            <x-ui.input
+                                group="col-md-12"
+                                :label="__('Long Description')"
+                                type="textarea"
+                                name="long_description"
+                                id="long_description"
+                                :value="$latest->long_description ?? null"
+                                rows="4"
                                 class="summernote"
                             />
                         </div>
@@ -47,7 +58,7 @@
                                 :value="isset($latest->image) ? asset($latest->image) :null"
                                 accept="image/*"
                             />
-                            <p>W:413 H:346</p>
+                            <p>W:763 H:400</p>
                         </div>
                         <div class="row pb-6">
                             <div class="col-md-12">
