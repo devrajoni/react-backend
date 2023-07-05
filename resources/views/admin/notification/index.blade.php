@@ -22,7 +22,7 @@
 						      <th class="text-center">Email</th>
 						      <th class="text-center">Subject</th>
 						      <th class="text-center">Message</th>
-						      <th class="text-end">Time</th>
+						      <th class="text-center">Time</th>
 						      <th class="text-end">Action</th>
 						    </tr>
 						</thead>
