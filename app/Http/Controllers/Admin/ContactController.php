@@ -16,4 +16,16 @@ class ContactController extends Controller
         return view('admin.notification.index', compact('contacts'));
 
     }
+
+   public function destroy( $id)
+    {
+
+        $data = Contact::where('id', $id)->first();
+        $data->delete();
+        toastr()->success('Data has been delete successfully!');
+
+        return redirect()
+                ->route('contacts');
+
+    }
 }

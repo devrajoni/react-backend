@@ -104,6 +104,7 @@ Route::group(['middleware' =>['admin.auth','auth']], function(){
         Route::resource('work-category', WorkCategoryController::class);
         Route::get('work-category-status/{id}', [WorkCategoryController::class, 'status'])->name('work-category-status');
         Route::get('contacts', [ContactController::class, 'index'])->name('contacts');
+        Route::get('contact-destroy/{id}', [ContactController::class, 'destroy'])->name('contact-destroy');
     });
 });
 

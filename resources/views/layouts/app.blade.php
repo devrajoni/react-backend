@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" >
     <head>
-        @include('includes.admin.styles')
-
-        
-        
+        @include('includes.admin.styles')  
     </head>
 
     <body class="app sidebar-mini @if(Auth::check() && Auth::user()->darkmode == 1) dark-mode @endif">
 
-        <div class="page mt-5">
+        <div class="page">
             <div class="page-main">
                     @include('includes.admin.verticalmenu')
                     <div class="app-content main-content">

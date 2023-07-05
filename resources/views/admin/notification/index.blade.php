@@ -23,6 +23,7 @@
 						      <th class="text-center">Subject</th>
 						      <th class="text-center">Message</th>
 						      <th class="text-end">Time</th>
+						      <th class="text-end">Action</th>
 						    </tr>
 						</thead>
 					  	<tbody>
@@ -34,7 +35,10 @@
 							      	<td class="text-center">{{ $contact->email }}</td>
 							      	<td class="text-center">{{ $contact->subject }}</td>
 							      	<td class="text-center">{{ $contact->message }}</td>
-							      	<td class="text-end">{{ $contact->created_at }}</td>
+							      	<td class="text-center">{{ $contact->created_at }}</td>
+							      	<td class="text-end">
+							      		<a href="{{ route('contact-destroy', $contact->id) }}"><button type="submit" class="btn text-danger btn-sm"><i class="ph-light ph-trash"></i></i></button></a>
+							      	</td>
 							    </tr>
 					  		@endforeach
 					  	</tbody>
