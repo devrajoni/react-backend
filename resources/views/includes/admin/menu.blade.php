@@ -42,11 +42,11 @@
 							<div class="mt-1">Profile</div>
 						</a>
 						<a class="dropdown-item d-flex" href="{{url('/admin/social')}}">
-							<i class="feather feather-user me-3 fs-16 my-auto"></i>
+							<i class="ph ph-chats-circle me-3 fs-16 my-auto"></i>
 							<div class="mt-1">Social</div>
 						</a>
 						<a class="dropdown-item d-flex" href="{{url('/admin/setting')}}">
-							<i class="feather feather-user me-3 fs-16 my-auto"></i>
+							<i class="ph ph-gear me-3 fs-16 my-auto"></i>
 							<div class="mt-1">Setting</div>
 						</a>
 						<form id="logout-form" action="{{ route('logout') }}" method="POST">
