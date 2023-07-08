@@ -28,10 +28,6 @@ class LatestRequestForm extends FormRequest
                 'required',
                 'max:255',
             ],
-            'short_description' => [
-                'nullable',
-                
-            ],
             'long_description' => [
                 'nullable',
                 

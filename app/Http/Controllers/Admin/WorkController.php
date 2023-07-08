@@ -34,7 +34,7 @@ class WorkController extends Controller
             $image = $request->file('image');
             $name_gen_one = "work". time() . '.' . $image->extension();
             $location = public_path('uploads/work/'.$name_gen_one);
-            Image::make($image)->save($location);
+            Image::make($image)->resize(1168,600)->save($location);
             $save = 'uploads/work/'.$name_gen_one;
             $data['image'] = $save;
 
@@ -75,7 +75,7 @@ class WorkController extends Controller
             $image = $request->file('image');
             $name_gen_one = "work". time() . '.' . $image->extension();
             $location = public_path('uploads/work/'.$name_gen_one);
-            Image::make($image)->save($location);
+            Image::make($image)->resize(1168,600)->save($location);
             $save = 'uploads/work/'.$name_gen_one;
             $data['image'] = $save;
 

@@ -323,4 +323,47 @@ class HomeController extends Controller
             'success' => true,
         ],201);
     }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            'name' => [
+                'required',
+                'max:255',
+            ],
+            'designation' => [
+                'required',
+                'max:255',
+            ],
+            'image' => [
+                'required',
+            ],
+            'description' => [
+                'required',
+            ],
+        ]);
+
+        if ($request->image) {
+            $image = $request->file('image');
+            $name_gen_one = "testimonial". time() . '.' . $image->extension();
+            $location = public_path('uploads/testimonial/'.$name_gen_one);
+            Image::make($image)->resize(80,80)->save($location);
+            $save = 'uploads/testimonial/'.$name_gen_one;
+            $data['image'] = $save;
+
+        }
+
+        $data = Testimonial::create([
+            'name' => $request->name,
+            'designation' => $request->designation,
+            'email' => $request->email,
+            'image' => $data->image,
+            'description' => $request->description,
+        ]);
+
+        return response()->JSON([
+            'data' => $data,
+            'success' => true,
+        ], 201);
+    }
 }

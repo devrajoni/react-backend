@@ -28,18 +28,7 @@
                         <div class="row">
                             <x-ui.input
                                 group="col-md-12"
-                                :label="__('Short Description')"
-                                type="textarea"
-                                name="short_description"
-                                id="short_description"
-                                :value="$latest->short_description ?? null"
-                                rows="2"
-                            />
-                        </div>
-                        <div class="row">
-                            <x-ui.input
-                                group="col-md-12"
-                                :label="__('Long Description')"
+                                :label="__('Description')"
                                 type="textarea"
                                 name="long_description"
                                 id="long_description"

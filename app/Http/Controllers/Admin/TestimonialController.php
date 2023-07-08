@@ -31,7 +31,7 @@ class TestimonialController extends Controller
             $image = $request->file('image');
             $name_gen_one = "banner". time() . '.' . $image->extension();
             $location = public_path('uploads/testimonial/'.$name_gen_one);
-            Image::make($image)->resize(128,128)->save($location);
+            Image::make($image)->resize(80,80)->save($location);
             $save = 'uploads/testimonial/'.$name_gen_one;
             $data['image'] = $save;
 
@@ -68,7 +68,7 @@ class TestimonialController extends Controller
             $image = $request->file('image');
             $name_gen_one = "banner". time() . '.' . $image->extension();
             $location = public_path('uploads/testimonial/'.$name_gen_one);
-            Image::make($image)->resize(128,128)->save($location);
+            Image::make($image)->resize(80,80)->save($location);
             $save = 'uploads/testimonial/'.$name_gen_one;
             $data['image'] = $save;
 
