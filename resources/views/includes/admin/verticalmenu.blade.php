@@ -1,9 +1,9 @@
 <!--aside open-->
 <aside class="app-sidebar">
-<div class="app-sidebar__logo">
+<!-- <div class="app-sidebar__logo">
     <a class="header-brand" href="" style="color: white;">
     </a>
-</div>
+</div> -->
 <div class="app-sidebar3">
     <div class="app-sidebar__user">
         <div class="dropdown user-pro-body text-center">
@@ -185,12 +185,12 @@
                 <li><a href="{{url('admin/testimonial')}}" class="slide-item">All Testimonial</a></li>
             </ul>
         </li>
- 
+
         <li class="slide">
             <a class="side-menu__item" data-bs-toggle="slide" href="#">
                 <svg class="sidemenu_icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M20 22H6C4.34315 22 3 20.6569 3 19V5C3 3.34315 4.34315 2 6 2H20C20.5523 2 21 2.44772 21 3V21C21 21.5523 20.5523 22 20 22ZM19 20V18H6C5.44772 18 5 18.4477 5 19C5 19.5523 5.44772 20 6 20H19ZM5 16.1707C5.31278 16.0602 5.64936 16 6 16H19V4H6C5.44772 4 5 4.44772 5 5V16.1707ZM12 10C10.8954 10 10 9.10457 10 8C10 6.89543 10.8954 6 12 6C13.1046 6 14 6.89543 14 8C14 9.10457 13.1046 10 12 10ZM9 14C9 12.3431 10.3431 11 12 11C13.6569 11 15 12.3431 15 14H9Z"></path></svg>
-                <span class="side-menu__label">Contact</span><i class="angle fa fa-angle-right"></i>
-            </a><path d="M20 22H6C4.34315 22 3 20.6569 3 19V5C3 3.34315 4.34315 2 6 2H20C20.5523 2 21 2.44772 21 3V21C21 21.5523 20.5523 22 20 22ZM19 20V18H6C5.44772 18 5 18.4477 5 19C5 19.5523 5.44772 20 6 20H19ZM5 16.1707C5.31278 16.0602 5.64936 16 6 16H19V4H6C5.44772 4 5 4.44772 5 5V16.1707ZM12 10C10.8954 10 10 9.10457 10 8C10 6.89543 10.8954 6 12 6C13.1046 6 14 6.89543 14 8C14 9.10457 13.1046 10 12 10ZM9 14C9 12.3431 10.3431 11 12 11C13.6569 11 15 12.3431 15 14H9Z"></path>
+                <span class="side-menu__label">Contact</span>
+            </a>
             <ul class="slide-menu custom-ul">
                 <li><a href="{{url('admin/contact-card/create')}}" class="slide-item">Create Contact</a></li>
                 <li><a href="{{url('admin/contact-card')}}" class="slide-item">All Contact</a></li>
@@ -223,6 +223,40 @@
                 <li><a href="{{url('/admin/contacts')}}" class="slide-item smark-all" >All Notifications</a></li>
             </ul>
         </li> 
+        <li class="slide">
+            <a class="side-menu__item"  href="{{url('/profile')}}">
+                <svg  class="sidemenu_icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM6 15V17H18V15H6ZM6 7V13H12V7H6ZM14 7V9H18V7H14ZM14 11V13H18V11H14ZM8 9H10V11H8V9Z"></path></svg>
+                <span class="side-menu__label">Profile</span>
+            </a>
+        </li>
+        <li class="slide">
+            <a class="side-menu__item"  href="{{url('/admin/social')}}">
+                <svg  class="sidemenu_icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 1L21.5 6.5V17.5L12 23L2.5 17.5V6.5L12 1ZM6.49896 9.97089L11 12.5768V17.6252H13V12.5768L17.501 9.9709L16.499 8.24005L12 10.8447L7.50104 8.24004L6.49896 9.97089Z"></path></svg>
+                <span class="side-menu__label">Social</span>
+            </a>
+        </li>
+        <li class="slide">
+            <a class="side-menu__item"  href="{{url('/admin/setting')}}">
+                <svg  class="sidemenu_icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M6.45455 19L2 22.5V4C2 3.44772 2.44772 3 3 3H21C21.5523 3 22 3.44772 22 4V18C22 18.5523 21.5523 19 21 19H6.45455ZM8.14499 12.071L7.16987 12.634L8.16987 14.366L9.1459 13.8025C9.64746 14.3133 10.2851 14.69 11 14.874V16H13V14.874C13.7149 14.69 14.3525 14.3133 14.8541 13.8025L15.8301 14.366L16.8301 12.634L15.855 12.071C15.9495 11.7301 16 11.371 16 11C16 10.629 15.9495 10.2699 15.855 9.92901L16.8301 9.36602L15.8301 7.63397L14.8541 8.19748C14.3525 7.68674 13.7149 7.31003 13 7.12602V6H11V7.12602C10.2851 7.31003 9.64746 7.68674 9.1459 8.19748L8.16987 7.63397L7.16987 9.36602L8.14499 9.92901C8.0505 10.2699 8 10.629 8 11C8 11.371 8.0505 11.7301 8.14499 12.071ZM12 13C10.8954 13 10 12.1046 10 11C10 9.89543 10.8954 9 12 9C13.1046 9 14 9.89543 14 11C14 12.1046 13.1046 13 12 13Z"></path></svg>
+                <span class="side-menu__label">
+                Setting</span>
+            </a>
+        </li>
+<!--         <li class="slide">
+            <a class="side-menu__item"  href="{{url('/admin/profile')}}">
+                <svg  class="sidemenu_icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 5v2h-4V5h4M9 5v6H5V5h4m10 8v6h-4v-6h4M9 17v2H5v-2h4M21 3h-8v6h8V3zM11 3H3v10h8V3zm10 8h-8v10h8V11zm-10 4H3v6h8v-6z"/></svg>
+                <span class="side-menu__label">
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                        @csrf
+
+                        <button type="submit" class="dropdown-item d-flex">
+                            <i class="feather feather-power me-3 fs-16 my-auto"></i>
+                            <div class="mt-1" >Logout</div>
+                        </button>
+                    </form>
+                </span>
+            </a>
+        </li> -->
     </ul>
 </div>
 </aside>

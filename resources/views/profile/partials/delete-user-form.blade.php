@@ -1,4 +1,4 @@
-<section class="space-y-6">
+<!-- <section class="space-y-6">
     <header>
         <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
             {{ __('Delete Account') }}
@@ -39,7 +39,7 @@
                 />
 
                 <x-input-error :messages="$errors->userDeletion->get('password')" class="mt-2" />
-            </div>
+            </div> -->
 
 <!--             <div class="mt-6 flex justify-end">
                 <x-secondary-button x-on:click="$dispatch('close')">
@@ -50,6 +50,6 @@
                     {{ __('Delete Account') }}
                 </x-danger-button>
             </div> -->
-        </form>
+<!--         </form>
     </x-modal>
-</section>
+</section> -->
