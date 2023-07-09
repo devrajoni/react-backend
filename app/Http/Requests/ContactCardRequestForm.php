@@ -29,7 +29,7 @@ class ContactCardRequestForm extends FormRequest
                 'max:255',
             ],
             'icon' => [
-                $this->home_banner ? 'nullable' : 'required',
+                $this->contact_card ? 'nullable' : 'required',
                 'image',  
             ],
             'description' => [
