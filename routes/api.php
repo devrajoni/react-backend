@@ -49,5 +49,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     Route::get('/similar-project',[HomeController::class,'similarProject'])->name('similar-project');
     Route::get('/feature',[HomeController::class,'feature'])->name('feature');
     Route::get('/contact-card',[HomeController::class,'contacts'])->name('contact-card');
-    Route::post('/testimonial',[HomeController::class,'store'])->name('testimonial');
+    Route::post('/testimonials',[HomeController::class,'test'])->name('testimonials');
     Route::post('/contact',[ContactController::class,'store'])->name('contact');

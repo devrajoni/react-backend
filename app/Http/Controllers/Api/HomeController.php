@@ -29,6 +29,8 @@ use App\Models\Feature;
 use App\Models\ContactCard;
 use App\Models\WorkCategory;
 use App\Models\SingleBlog;
+use Image;
+use File;
 
 class HomeController extends Controller
 {
@@ -136,7 +138,7 @@ class HomeController extends Controller
 
     public function blogDetails($id)
     {
-        $data = Latest::where('id', $id)->get();
+        $data = Latest::where('id', $id)->first();
 
         return response()->json([
             'data' => $data,
@@ -324,8 +326,9 @@ class HomeController extends Controller
         ],201);
     }
 
-    public function store(Request $request)
+    public function test(Request $request)
     {
+        $test = null;
         $request->validate([
             'name' => [
                 'required',
@@ -335,8 +338,11 @@ class HomeController extends Controller
                 'required',
                 'max:255',
             ],
-            'image' => [
+            'rating' => [
                 'required',
+            ],
+            'image' => [
+                'nullable',
             ],
             'description' => [
                 'required',
@@ -349,15 +355,17 @@ class HomeController extends Controller
             $location = public_path('uploads/testimonial/'.$name_gen_one);
             Image::make($image)->resize(80,80)->save($location);
             $save = 'uploads/testimonial/'.$name_gen_one;
-            $data['image'] = $save;
+            $test = $save;
 
         }
+        // dd($test['image'] );
 
         $data = Testimonial::create([
+            'latest_id' => $request->latest_id,
             'name' => $request->name,
             'designation' => $request->designation,
-            'email' => $request->email,
-            'image' => $data->image,
+            'rating' => $request->rating,
+            'image' => $test,
             'description' => $request->description,
         ]);
 

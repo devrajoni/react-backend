@@ -17,9 +17,11 @@
 					    <thead>
 						    <tr>
 						      <th class="text-start">#</th>
+						      <th class="text-center">Blog ID</th>
 						      <th class="text-center">Name</th>
 						      <th class="text-center">Designation</th>
-						      <th class="text-center">image</th>
+						      <th class="text-center">Image</th>
+						      <th class="text-center">Rating</th>
 						      <th class="text-center">Description</th>
 						      <th class="text-center">Status</th>
 						      <th class="text-end">Action</th>
@@ -29,9 +31,11 @@
 					  		@foreach($testimonials as $testimonial)
 							    <tr>
 							      	<td class="text-start">{{$loop->iteration}}</td>
+							      	<td class="text-center">{{ $testimonial->latest->title }}</td>
 							      	<td class="text-center">{{ $testimonial->name }}	</td>
 							      	<td class="text-center">{{ $testimonial->designation }}</td>
 							      	<td class="text-center"><img src="{{ asset($testimonial->image) }}" alt="image" height="100" width="200"></td>
+							      	<td class="text-center">{{ $testimonial->rating }}</td>
 							      	<td class="text-center">{!! $testimonial->description !!}</td>
                                   	<td class="text-center">
                                         @if($testimonial->status == 'Active')
@@ -43,8 +47,8 @@
                                         @endif
                                 	</td>
 							      	<td class="text-end">
-                                    <div class="d-flex justify-content-end align-items-center">
-                                        <a href="{{ route('testimonial.edit', $testimonial->id) }}" class="btn btn-sm text-primary"><i class="ph-light ph-pencil"></i></a>
+                                    <div class="text-center">
+                                       <!--  <a href="{{ route('testimonial.edit', $testimonial->id) }}" class="btn btn-sm text-primary"><i class="ph-light ph-pencil"></i></a> -->
 
                                         <form method="POST" action="{{ route('testimonial.destroy', $testimonial->id) }}" onsubmit="return confirm('Are you sure?');">
                                             @csrf

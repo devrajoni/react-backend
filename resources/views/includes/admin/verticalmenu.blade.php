@@ -181,7 +181,7 @@
                 <span class="side-menu__label">Testimonial</span><i class="angle fa fa-angle-right"></i>
             </a>
             <ul class="slide-menu custom-ul">
-                <li><a href="{{url('admin/testimonial/create')}}" class="slide-item">Create Testimonial</a></li>
+                <!-- <li><a href="{{url('admin/testimonial/create')}}" class="slide-item">Create Testimonial</a></li> -->
                 <li><a href="{{url('admin/testimonial')}}" class="slide-item">All Testimonial</a></li>
             </ul>
         </li>

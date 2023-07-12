@@ -15,9 +15,11 @@ return new class extends Migration
     {
         Schema::create('testimonials', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('blog_id');
             $table->string('name');
             $table->string('designation');
             $table->longText('description')->nullable();
+            $table->string('rating');
             $table->string('image');
             $table->enum('status', ['Active', 'Inactive']);
             $table->timestamps();
