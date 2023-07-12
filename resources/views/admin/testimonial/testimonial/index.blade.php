@@ -22,7 +22,6 @@
 						      <th class="text-center">Designation</th>
 						      <th class="text-center">Image</th>
 						      <th class="text-center">Rating</th>
-						      <th class="text-center">Description</th>
 						      <th class="text-center">Status</th>
 						      <th class="text-end">Action</th>
 						    </tr>
@@ -35,8 +34,61 @@
 							      	<td class="text-center">{{ $testimonial->name }}	</td>
 							      	<td class="text-center">{{ $testimonial->designation }}</td>
 							      	<td class="text-center"><img src="{{ asset($testimonial->image) }}" alt="image" height="100" width="200"></td>
-							      	<td class="text-center">{{ $testimonial->rating }}</td>
-							      	<td class="text-center">{!! $testimonial->description !!}</td>
+							      	<td class="text-center">
+					      			  @php
+								    	switch ($testimonial->rating) {
+									      	case "1":
+										        echo '<i class="ph-fill ph-star"></i>';
+										        break;
+										case "1.5":
+											echo '<i class="ph-fill ph-star"></i>
+											 	 <i class="ph-fill ph-star-half"></i>';
+										break;
+										case "2":
+											echo '<i class="ph-fill ph-star"></i>
+											<i class="ph-fill ph-star"></i>';
+										break;
+										case "2.5":
+											echo '<i class="ph-fill ph-star"></i>
+											<i class="ph-fill ph-star"></i>
+											<i class="ph-fill ph-star-half"></i>';
+										break;
+										case "3":
+											echo '<i class="ph-fill ph-star"></i>
+												 <i class="ph-fill ph-star"></i>
+												 <i class="ph-fill ph-star"></i>';
+										break;
+										case "3.5":
+											echo '<i class="ph-fill ph-star"></i>
+												<i class="ph-fill ph-star"></i>
+												<i class="ph-fill ph-star"></i>
+												<i class="ph-fill ph-star-half"></i>';
+										break;
+										case "4":
+											echo '<i class="ph-fill ph-star"></i>
+												<i class="ph-fill ph-star"></i>
+												<i class="ph-fill ph-star"></i>
+												<i class="ph-fill ph-star"></i>';
+										break;
+										case "4.5":
+											echo '										<i class="ph-fill ph-star"></i>
+												<i class="ph-fill ph-star"></i>
+												<i class="ph-fill ph-star"></i>
+												<i class="ph-fill ph-star"></i>
+												<i class="ph-fill ph-star-half"></i>';
+										break;
+										case "5":
+											echo '<i class="ph-fill ph-star"></i>
+												<i class="ph-fill ph-star"></i>
+												<i class="ph-fill ph-star"></i>
+												<i class="ph-fill ph-star"></i>
+												<i class="ph-fill ph-star"></i>';
+										break;
+										default:
+										"";
+										}
+										@endphp
+							      	 </td>
                                   	<td class="text-center">
                                         @if($testimonial->status == 'Active')
                                             <a href="{{ route('testimonial-status', $testimonial->id) }}"><span class="badge badge-pill badge-primary">Active</span>
