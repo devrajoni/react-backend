@@ -30,11 +30,11 @@
 					  		@foreach($testimonials as $testimonial)
 							    <tr>
 							      	<td class="text-start">{{$loop->iteration}}</td>
-							      	<td class="text-center">{{ $testimonial->latest->title }}</td>
+							      	<td class="text-center">{{ $testimonial->latest->title ?? null }}</td>
 							      	<td class="text-center">{{ $testimonial->name }}	</td>
 							      	<td class="text-center">{{ $testimonial->designation }}</td>
 							      	<td class="text-center"><img src="{{ asset($testimonial->image) }}" alt="image" height="100" width="200"></td>
-							      	<td class="text-center">
+							      	<td class="text-center text-black">
 					      			  @php
 								    	switch ($testimonial->rating) {
 									      	case "1":

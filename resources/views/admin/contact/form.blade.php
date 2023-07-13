@@ -71,8 +71,6 @@
     </div>
 @endsection
 @section('scripts')
-        <!-- INTERNAL Summernote js  -->
-    <script src="{{asset('assets/plugins/summernote/summernote.js')}}?v=<?php echo time(); ?>"></script>
 
     <!-- INTERNAL Index js-->
     <script src="{{asset('assets/js/support/support-sidemenu.js')}}?v=<?php echo time(); ?>"></script>

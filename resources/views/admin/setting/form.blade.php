@@ -85,7 +85,6 @@
                                 :label="__('Description')"
                                 type="textarea"
                                 name="description"
-                                id="description"
                                 :value="$setting->description ?? null"
                                 class="summernote"
                                 rows="3"
@@ -97,7 +96,6 @@
                                 :label="__('Long Description')"
                                 type="textarea"
                                 name="landing_description"
-                                id="landing_description"
                                 :value="$setting->landing_description ?? null"
                                 class="summernote"
                                 rows="3"
@@ -136,8 +134,6 @@
     </div>
 @endsection
 @section('scripts')
-    <!-- INTERNAL Summernote js  -->
-    <script src="{{asset('assets/plugins/summernote/summernote.js')}}?v=<?php echo time(); ?>"></script>
 
     <!-- INTERNAL Index js-->
     <script src="{{asset('assets/js/support/support-sidemenu.js')}}?v=<?php echo time(); ?>"></script>

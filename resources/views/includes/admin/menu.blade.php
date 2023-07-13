@@ -14,7 +14,7 @@
 			</div>
 			<div class="header-buttons-main">
 				
-				<a class="btn btn-outline-light header-buttons text-center visitsite ms-2" href="" target="_blank"><i class="fe fe-home pe-lg-2"></i><span class="d-m-none">Home</span></a>
+				<a class="btn btn-outline-light header-buttons text-center visitsite ms-2" href="https://sky.afro-digital.com/" target="_blank"><i class="fe fe-home pe-lg-2"></i><span class="d-m-none">Home</span></a>
 					
 			</div><!-- SEARCH -->
 			<div class="d-flex order-lg-2 my-auto ms-auto dropdown-container align-items-center">
